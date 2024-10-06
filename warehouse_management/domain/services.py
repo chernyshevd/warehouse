@@ -1,4 +1,4 @@
-from typing import List, Union
+from typing import List, Optional
 
 from .models import Category, Customer, Order, Product, Role, Staff
 from .repositories import (
@@ -14,12 +14,12 @@ from .repositories import (
 class WarehouseService:
     def __init__(
         self,
-        product_repo: Union[ProductRepository, None] = None,
-        order_repo: Union[OrderRepository, None] = None,
-        category_repo: Union[CategoryRepository, None] = None,
-        role_repo: Union[RoleRepository, None] = None,
-        staff_repo: Union[StaffRepository, None] = None,
-        customer_repo: Union[CustomerRepository, None] = None,
+        product_repo: Optional[ProductRepository] = None,
+        order_repo: Optional[OrderRepository] = None,
+        category_repo: Optional[CategoryRepository] = None,
+        role_repo: Optional[RoleRepository] = None,
+        staff_repo: Optional[StaffRepository] = None,
+        customer_repo: Optional[CustomerRepository] = None,
     ):
         self.product_repo = product_repo
         self.order_repo = order_repo

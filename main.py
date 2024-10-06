@@ -19,9 +19,9 @@ def main() -> None:
 
     warehouse_service = WarehouseService(product_repo, order_repo)
     with SqlAlchemyUnitOfWork(session) as uow:
-        new_product = warehouse_service.create_product(name="test1", quantity=1, price=100, category=10)
+        new_product = warehouse_service.create_product(name="test-1", quantity=1, price=100, category=10)
         uow.commit()
-        _product = product_repo.get(4)
+        _product = product_repo.get(1)
         print(_product)
         print(f"create product: {new_product}")
         # TODO add some actions
