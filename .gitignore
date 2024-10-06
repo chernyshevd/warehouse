@@ -7,12 +7,6 @@
 .vscode/
 
 
-# Игнорировать все файлы в папке log/
-log/*
-
-# За исключением файла exception.log
-!log/log_analyzer.log
-
 # Environments
 myenv/
 .venv/
